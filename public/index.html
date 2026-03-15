@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PluginPack Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>PluginPack<span>Pro</span></h1>
+            <div class="selectors">
+                <select id="version">
+                    <option value="1.21">1.21.x</option>
+                    <option value="1.20">1.20.x</option>
+                    <option value="1.19">1.19.x</option>
+                </select>
+                <select id="software">
+                    <option value="paper">Paper / Purpur</option>
+                    <option value="spigot">Spigot</option>
+                    <option value="fabric">Fabric</option>
+                </select>
+            </div>
+        </header>
+
+        <main>
+            <section class="search-area">
+                <div class="search-bar">
+                    <input type="text" id="query" placeholder="Search Modrinth, Hangar, Spigot...">
+                    <button onclick="searchAll()">Search</button>
+                </div>
+                <div id="results" class="grid"></div>
+            </section>
+
+            <aside class="pack-sidebar">
+                <h2>Your Pack</h2>
+                <div id="drop-zone" class="drop-zone">
+                    Drag & Drop .jar here
+                </div>
+                <div id="pack-list"></div>
+                <button class="download-btn" onclick="downloadZIP()">BUILD ZIP PACK</button>
+            </aside>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
